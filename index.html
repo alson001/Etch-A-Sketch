@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SketchPad</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <h1 class="title">SketchPad</h1>
+      <div class="mode">Mode: Coloring</div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button class="whiteButton" onclick="changeColor('white')">
+            eraser
+          </button>
+          <button class="blackButton" onclick="changeColor('black')">
+            black
+          </button>
+          <button class="randomButton" onclick="changeColor('random')">
+            random
+          </button>
+          <button class="resetButton" onclick="resetBoard()">reset</button>
+        </div>
+        <input
+          type="text"
+          placeholder="Size of Board"
+          value="16"
+          onchange="changeSize(this.value)"
+        />
+        <button>set Size</button>
+        <div class="error">Must be between 2 and 100</div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
